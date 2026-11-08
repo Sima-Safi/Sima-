@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sima Safi – Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loader"><div class="logo">Sima Safi</div><div class="load-bar"><i></i></div></div>
+<canvas id="particles" aria-hidden="true"></canvas>
+<div class="orb o1" data-speed="0.12"></div><div class="orb o2" data-speed="-0.08"></div>
+
+<header>
+  <nav class="marquee" aria-label="Main">
+    <ul class="track" id="track">
+      <li><a href="#home" data-i18n="nHome"></a></li>
+      <li><a href="#about" data-i18n="nAbout"></a></li>
+      <li><a href="#journey" data-i18n="nJourney"></a></li>
+      <li><a href="#skills" data-i18n="nSkills"></a></li>
+      <li><a href="#projects" data-i18n="nProjects"></a></li>
+      <li><a href="#contact" data-i18n="nContact"></a></li>
+    </ul>
+  </nav>
+  <div class="tools">
+    <button id="theme" aria-label="Toggle theme">◐</button>
+    <select id="lang" aria-label="Language"><option value="en">English</option><option value="fa">دری</option><option value="ps">پښتو</option></select>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="wrap hero">
+    <div class="reveal">
+      <h1>Sima Safi</h1>
+      <p class="typing"><span id="typed"></span><span class="caret"></span></p>
+      <p class="muted" data-i18n="intro"></p>
+      <div class="btns"><a class="btn" href="#projects" data-i18n="cta1"></a><a class="btn ghost" href="#contact" data-i18n="cta2"></a></div>
+    </div>
+    <!-- PHOTO: save your picture as photo.jpg next to index.html (best size 800x1000 px) -->
+    <div class="photo reveal"><div class="ph"><span>Photo</span><img src="me.jpeg" alt="Sima Safi" onerror="this.remove()"></div></div>
+  </section>
+
+  <section id="about" class="wrap">
+    <h2 data-i18n="aT"></h2>
+    <div class="glass reveal about"><p data-i18n="a1"></p><p data-i18n="a2"></p><p data-i18n="a3"></p><p data-i18n="a4"></p></div>
+  </section>
+
+  <section id="journey" class="wrap">
+    <h2 data-i18n="jT"></h2>
+    <!-- To add a step, copy one <li> block and change its keys/text -->
+    <ol class="timeline reveal">
+      <li class="glass"><h3 data-i18n="j1"></h3><p data-i18n="j1d"></p></li>
+      <li class="glass"><h3>HTML</h3><p data-i18n="j2d"></p></li>
+      <li class="glass"><h3>CSS</h3><p data-i18n="j3d"></p></li>
+      <li class="glass"><h3>JavaScript</h3><p data-i18n="j4d"></p></li>
+    </ol>
+    <h2 class="sub" data-i18n="lT"></h2>
+    <div class="grid reveal">
+      <div class="glass lang"><b>●</b><h3 data-i18n="lP"></h3><p data-i18n="native"></p></div>
+      <div class="glass lang"><b>●</b><h3 data-i18n="lD"></h3><p data-i18n="fluent"></p></div>
+      <div class="glass lang"><b>●</b><h3 data-i18n="lE"></h3><p data-i18n="upper"></p></div>
+    </div>
+  </section>
+
+  <section id="skills" class="wrap">
+    <h2 data-i18n="sT"></h2>
+    <div class="grid reveal">
+      <article class="glass tilt"><span class="icon">&lt;/&gt;</span><h3>HTML</h3><p data-i18n="sh"></p></article>
+      <article class="glass tilt"><span class="icon">{ }</span><h3>CSS</h3><p data-i18n="sc"></p></article>
+      <article class="glass tilt"><span class="icon">JS</span><h3>JavaScript</h3><p data-i18n="sj"></p></article>
+    </div>
+  </section>
+
+
+<section id="skills" class="warp">
+     <h2>My Skills</h2>
+    <div id="skillList"></div>
+</section>
+
+
+  <section id="projects" class="wrap">
+    <h2 data-i18n="pT"></h2>
+    <div class="grid reveal" id="projectGrid"></div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <h2 data-i18n="cT"></h2>
+    <div class="contact reveal">
+      <form id="form" class="glass" novalidate>
+        <label for="fname" data-i18n="fn"></label><input id="fname" autocomplete="name">
+        <label for="femail" data-i18n="em"></label><input id="femail" type="email" autocomplete="email">
+        <label for="fmsg" data-i18n="ms"></label><textarea id="fmsg" rows="4"></textarea>
+        <button class="btn" type="submit" data-i18n="send"></button>
+        <p id="status" role="status"></p>
+      </form>
+      <!-- Replace each # with your real link -->
+      <div class="social">
+        <a class="glass" href="mailto:your@email.com">Email</a>
+        <a class="glass" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="glass" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="glass" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="glass">
+  <div class="logo">Sima Safi</div>
+  <p class="muted" data-i18n="quote"></p>
+  <p class="flinks"><a href="#home" data-i18n="nHome"></a><a href="#about" data-i18n="nAbout"></a><a href="#journey" data-i18n="nJourney"></a><a href="#skills" data-i18n="nSkills"></a><a href="#projects" data-i18n="nProjects"></a><a href="#contact" data-i18n="nContact"></a></p>
+  <p class="muted">© <span id="year"></span> Sima Safi. <span data-i18n="rights"></span></p>
+</footer>
+<a id="toTop" href="#home" aria-label="Back to top">↑</a>
+<script src="script.js"></script>
+</body>
+</html>
